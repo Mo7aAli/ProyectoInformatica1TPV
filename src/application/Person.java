@@ -26,6 +26,7 @@ public class Person {
 	public String getFirstName() {
 		return firstName;
 	}
+	
 
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
@@ -76,11 +77,10 @@ public class Person {
 		return direction;
 	}
 
+
 	public void setDirection(String direction) {
 		this.direction = direction;
 	}
-
-	
 
 
 }
