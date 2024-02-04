@@ -6,7 +6,7 @@ import java.util.ResourceBundle;
 
 import javax.print.DocFlavor.URL;
 
-import application.Client;
+import application.Vendedor;
 import application.Product;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
@@ -19,43 +19,15 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 
-public class HomepageClienteController {
 
-	@FXML
-	private Button buttonPurchaseHistory;
+public class HomepageVendedorController {
 
-	@FXML
-	private Button buttonReturnProduct;
 
+	
 	@FXML
 	private Button buttonTechSupport;
 
-	@FXML
-	private Button buttonCard;
 
-	@FXML
-	private Button buttonCash;
-
-	@FXML
-	private Button buttonPay;
-
-	@FXML
-	private Label user;
-
-	@FXML
-	private Label firstName;
-
-	@FXML
-	private Label SecondName;
-
-	@FXML
-	private Label phoneNumber;
-
-	@FXML
-	private Label emailId;
-
-	@FXML
-	private Label DirerctionId;
 
 	@FXML
 	private ImageView image1;
@@ -84,7 +56,7 @@ public class HomepageClienteController {
 	@FXML
 	private ImageView image7;
 
-	private Client c;
+	private Vendedor v;
 
 	@FXML
 	private ImageView imageInfo;
@@ -103,25 +75,13 @@ public class HomepageClienteController {
 
 
 
-
-	@FXML
-	void showProfile(ActionEvent event) {
-
-		System.out.println(c);
-		user.setText(c.getUsername());
-		firstName.setText(c.getFirstName());
-		SecondName.setText(c.getSecondsName());
-		phoneNumber.setText(String.valueOf(c.getNumero()));
-		emailId.setText(c.getEmail());
-		DirerctionId.setText(c.getDirection());
+	public Vendedor getV() {
+		return v;
 	}
 
-	public Client getC() {
-		return c;
-	}
-
-	public void setC(Client c) {
-		this.c = c;
+	public void setV(Vendedor v2) {
+		this.v = v;
+		
 	}
 
 	public ImageView getImage1() {
@@ -360,13 +320,7 @@ public class HomepageClienteController {
 		imageInfo.setImage(image1.getImage());
 	}
 
-	private static class GlobalClickHandler implements EventHandler<Event> {
-		@Override
-		public void handle(Event event) {
-			System.out.println("Clic global detectado.");
-			// Aquí puedes realizar acciones en respuesta al clic global
-		}
-	}
+
 
 
 }

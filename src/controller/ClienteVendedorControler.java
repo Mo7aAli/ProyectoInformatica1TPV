@@ -44,9 +44,9 @@ public class ClienteVendedorControler {
 	    	try {
 				FXMLLoader loader2 = new FXMLLoader(getClass().getResource("/fxml/LoginVendedor.fxml"));
 				
-				//LoginClienteController control2 = new LoginClienteController();
+				loginVendedorController control2 = new loginVendedorController();
 				
-				//loader2.setController(control2);
+				loader2.setController(control2);
 				
 				Parent root2 = loader2.load();			
 				Stage stage = new Stage();

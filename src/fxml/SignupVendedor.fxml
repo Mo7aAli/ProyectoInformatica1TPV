@@ -25,16 +25,16 @@
                         <Font size="20.0" />
                      </font>
                   </Text>
-                  <TextField layoutX="156.0" layoutY="197.0" style="-fx-background-radius: 20; -fx-background-color: #C5CBD7;" />
+                  <TextField fx:id="firstNameId" layoutX="156.0" layoutY="197.0" style="-fx-background-radius: 20; -fx-background-color: #C5CBD7;" />
                   <Text fill="#004aad" layoutX="43.0" layoutY="216.0" strokeType="OUTSIDE" strokeWidth="0.0" text="First Name">
                      <font>
                         <Font size="15.0" />
                      </font>
                   </Text>
-                  <TextField layoutX="156.0" layoutY="236.0" style="-fx-background-radius: 20; -fx-background-color: #C5CBD7;" />
-                  <TextField layoutX="156.0" layoutY="272.0" style="-fx-background-radius: 20; -fx-background-color: #C5CBD7;" />
-                  <TextField layoutX="156.0" layoutY="311.0" style="-fx-background-radius: 20; -fx-background-color: #C5CBD7;" />
-                  <TextField layoutX="156.0" layoutY="351.0" style="-fx-background-radius: 20; -fx-background-color: #C5CBD7;" />
+                  <TextField fx:id="secondNameId" layoutX="156.0" layoutY="236.0" style="-fx-background-radius: 20; -fx-background-color: #C5CBD7;" />
+                  <TextField fx:id="userId" layoutX="156.0" layoutY="272.0" style="-fx-background-radius: 20; -fx-background-color: #C5CBD7;" />
+                  <TextField fx:id="passwordId" layoutX="156.0" layoutY="311.0" style="-fx-background-radius: 20; -fx-background-color: #C5CBD7;" />
+                  <TextField fx:id="confirmPassId" layoutX="156.0" layoutY="351.0" style="-fx-background-radius: 20; -fx-background-color: #C5CBD7;" />
                   <Text fill="#004aad" layoutX="32.0" layoutY="255.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Second Name">
                      <font>
                         <Font size="15.0" />
@@ -60,9 +60,9 @@
                         <Font size="15.0" />
                      </font>
                   </Text>
-                  <TextField layoutX="487.0" layoutY="196.0" style="-fx-background-radius: 20; -fx-background-color: #C5CBD7;" />
-                  <TextField layoutX="487.0" layoutY="236.0" style="-fx-background-radius: 20; -fx-background-color: #C5CBD7;" />
-                  <TextField layoutX="487.0" layoutY="272.0" style="-fx-background-radius: 20; -fx-background-color: #C5CBD7;" />
+                  <TextField fx:id="emailId" layoutX="487.0" layoutY="196.0" style="-fx-background-radius: 20; -fx-background-color: #C5CBD7;" />
+                  <TextField fx:id="numberId" layoutX="487.0" layoutY="236.0" style="-fx-background-radius: 20; -fx-background-color: #C5CBD7;" />
+                  <TextField fx:id="directionId" layoutX="487.0" layoutY="272.0" style="-fx-background-radius: 20; -fx-background-color: #C5CBD7;" />
                   <TextField layoutX="487.0" layoutY="351.0" style="-fx-background-radius: 20; -fx-background-color: #C5CBD7;" />
                   <Text fill="#004aad" layoutX="369.0" layoutY="254.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone Number">
                      <font>
@@ -79,7 +79,7 @@
                         <Font size="15.0" />
                      </font>
                   </Text>
-                  <Button layoutX="307.0" layoutY="427.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="87.0" style="-fx-background-radius: 20; -fx-background-color: #004AAD;" text="Sign Up" textFill="WHITE" />
+                  <Button layoutX="307.0" layoutY="427.0" mnemonicParsing="false" onAction="#registrrse" prefHeight="27.0" prefWidth="87.0" style="-fx-background-radius: 20; -fx-background-color: #004AAD;" text="Sign Up" textFill="WHITE" />
                   <Text fill="#0027ab" layoutX="19.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vendedor">
                      <font>
                         <Font size="20.0" />

@@ -4,8 +4,8 @@ package controller;
 import java.io.File;
 import java.util.List;
 
-import application.Client;
-import application.FileUtilAlmacen;
+import application.Vendedor;
+import application.FileutilVendedor ;
 import application.Product;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -23,68 +23,54 @@ import javafx.scene.image.ImageView;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
-public class LoginClienteController {
+public class loginVendedorController {
 
 	@FXML
-	private Button buttonLogin;
+	private Button buttonLoginVendedor;
 
 	@FXML
-	private Button buttonSignup;
+	private Button buttonSignupVendedor;
 
 	@FXML
-	private TextField userTest;
+	private TextField userTestVendedor;
 
 	@FXML
-	private PasswordField passTest;
+	private PasswordField passTestVendedor;
 
 	@FXML
-	private Hyperlink forgotPasswordLink;
+	private Hyperlink forgotPasswordLinkVendedor;
 
-	FileUtilAlmacen fu = new FileUtilAlmacen();
+	FileutilVendedor  fu = new FileutilVendedor();
 
 	@FXML
-	void mostrarHomepagecliente(ActionEvent event) {
+	void mostrarHomepageVendedor(ActionEvent event) {
 
-		System.out.println(userTest.getText());
-		System.out.println(passTest.getText());
+		System.out.println(userTestVendedor.getText());
+		System.out.println(passTestVendedor.getText());
 
-		List<Client> clientes = fu.leer();
+		List<Vendedor> vendedores = fu.leer();
+		System.out.print(vendedores);
 
-		System.out.println(clientes.size());
+		//System.out.println(vendedores.size());
 
 
 		boolean entro = false;	
-		for(Client c : clientes) {
-			if(c.getUsername().equals(userTest.getText()) & c.getPassword().equals(passTest.getText())) {
+		for(Vendedor v : vendedores) {
+			if(v.getUsername().equals(userTestVendedor.getText()) & v.getPassword().equals(passTestVendedor.getText())) {
 				try {
-					FXMLLoader loader2 = new FXMLLoader(getClass().getResource("/fxml/HomepageCliente.fxml"));
+					FXMLLoader loader2 = new FXMLLoader(getClass().getResource("/fxml/HomepageVendedorfxml"));
 					entro = true;
 
-					HomepageClienteController control2 = new HomepageClienteController();
-					Product product = new Product("Agua", 1.00, 1.50, "agua del mecadona", 10,"Agua.png");					
-					Image myImage = new Image(product.getPath());
-					Product product2 = new Product("Limon", 2.00, 1.80, "limon de Peru", 10,"Limon.png");					
-					Product product3 = new Product("Lays", 2.00, 1.80, "limin de Peru", 10,"Lays.png");	
-					Product product4 = new Product("Limon", 2.00, 1.80, "limin de Peru", 10,"Limon.png");
-					Product product5 = new Product("Limon", 2.00, 1.80, "limin de Peru", 10,"Limon.png");					
-					Product product6 = new Product("Limon", 2.00, 1.80, "limin de Peru", 10,"Limon.png");					
-					Product product7 = new Product("Limon", 2.00, 1.80, "limin de Peru", 10,"Limon.png");					
-					Product product8 = new Product("Limon", 2.00, 1.80, "limin de Peru", 10,"Limon.png");			
-					Product product9 = new Product("Limon", 2.00, 1.80, "limin de Peru", 10,"Limon.png");					
+					HomepageVendedorController control2 = new HomepageVendedorController();
+					
 					
 					
 					
 					
 					loader2.setController(control2);
-					control2.setC(c);
+					
 
 					Parent root2 = loader2.load();
-					
-					control2.getImage1().setImage(myImage);
-					
-					control2.getImage2().setImage(new Image(product2.getPath()));
-					
-					control2.getImage3().setImage(new Image(product3.getPath()));
 					
 					
 					Stage stage = new Stage();
@@ -118,10 +104,10 @@ public class LoginClienteController {
 
 
 	@FXML
-	void mostrarSignupCliente(ActionEvent event) {
+	void mostrarSignupVendedor(ActionEvent event) {
 
 		try {
-			FXMLLoader loader3 = new FXMLLoader(getClass().getResource("/fxml/SignupCliente.fxml"));
+			FXMLLoader loader3 = new FXMLLoader(getClass().getResource("/fxml/SignupVendedor.fxml"));
 
 			SignUpCliente control3 = new SignUpCliente();
 
@@ -142,7 +128,7 @@ public class LoginClienteController {
 	
 
     @FXML
-    void recoverPass(ActionEvent event) {
+    void recoverPassVendedor(ActionEvent event) {
     	
     	try {
 			FXMLLoader loader3 = new FXMLLoader(getClass().getResource("/fxml/CheckUsername.fxml"));
