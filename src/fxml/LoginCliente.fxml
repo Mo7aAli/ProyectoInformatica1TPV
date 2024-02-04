@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <BorderPane layoutX="-3.0" layoutY="-3.0" prefHeight="500.0" prefWidth="700.0">
+         <center>
+            <AnchorPane prefHeight="506.0" prefWidth="702.0" style="-fx-background-color: #D8DEE8;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="159.0" fitWidth="190.0" layoutX="273.0" layoutY="39.0">
+                     <image>
+                        <Image url="@../../imagefxml/ClientIcon.png" />
+                     </image>
+                  </ImageView>
+                  <Text fill="#004aad" layoutX="335.0" layoutY="237.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LogIn">
+                     <font>
+                        <Font name="Palatino Bold" size="24.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="buttonLogin" layoutX="323.0" layoutY="354.0" mnemonicParsing="false" onAction="#mostrarHomepagecliente" prefHeight="27.0" prefWidth="90.0" style="-fx-background-radius: 25; -fx-background-color: #004AAD;" text="Login" textFill="WHITE" />
+                  <Button fx:id="buttonSignup" layoutX="322.0" layoutY="440.0" mnemonicParsing="false" onAction="#mostrarSignupCliente" prefHeight="27.0" prefWidth="90.0" style="-fx-background-radius: 0; -fx-background-color: #04537C;" text="Signup" textFill="WHITE" />
+                  <TextField fx:id="userTest" layoutX="287.0" layoutY="253.0" promptText="User" style="-fx-background-color: #C5CBD7;" />
+                  <Text layoutX="360.0" layoutY="420.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Or" />
+                  <PasswordField fx:id="passTest" layoutX="286.0" layoutY="292.0" promptText="Password" style="-fx-background-color: #C5CBD7; -fx-border-radius: 90;" />
+                  <Hyperlink fx:id="forgotPasswordLink" layoutX="312.0" layoutY="325.0" onAction="#recoverPass" text="Forgot Password?" textFill="RED" />
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GridPane xmlns:fx="http://javafx.com/fxml/1" fx:id="root" prefHeight="600.0" prefWidth="800.0"
+          fx:controller="sample.InvoiceController" >
+   <children>
+      <VBox spacing="10.0">
+         <children>
+            <HBox spacing="10.0">
+               <children>
+                  <Label text="Cliente:"/>
+                  <Label fx:id="clientName" text="MohamedAli"/>
+               </children>
+            </HBox>
+            <TableView fx:id="invoiceTable" VBox.vgrow="ALWAYS">
+               <columns>
+                  <TableColumn text="Artículo" prefWidth="120.0"/>
+                  <TableColumn text="Cant." prefWidth="50.0"/>
+                  <TableColumn text="Precio" prefWidth="70.0"/>
+                  <TableColumn text="Subtotal" prefWidth="80.0"/>
+               </columns>
+            </TableView>
+            <HBox spacing="10.0">
+               <children>
+                  <Label text="Total:"/>
+                  <Label fx:id="totalLabel" text="6,65€"/>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</GridPane>
