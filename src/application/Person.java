@@ -77,6 +77,7 @@ public class Person {
 		return direction;
 	}
 
+	
 
 	public void setDirection(String direction) {
 		this.direction = direction;
